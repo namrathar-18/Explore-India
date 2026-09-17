@@ -71,3 +71,23 @@ h1 em, h2 em { color: #efaa73; font-style: italic; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.image-button img, .button { transition: none; } }
 
 
+/* UI Improvements */
+.destination-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(31, 42, 36, 0.12);
+}
+
+.card-action {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.image-button:hover .card-action {
+    transform: rotate(45deg);
+    background: var(--saffron);
+}
+
+
