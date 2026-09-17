@@ -100,3 +100,69 @@ h1 em, h2 em { color: #efaa73; font-style: italic; }
 .contact-info p {
     margin: 5px 0;
 }
+
+.destination-card,
+.card-info,
+.card-info > div,
+.story-panel,
+.plan-row {
+    min-width: 0;
+}
+
+.image-button,
+.image-button img,
+.featured .image-button img {
+    aspect-ratio: 4 / 3;
+    height: auto;
+}
+
+.image-button img {
+    object-fit: cover;
+}
+
+.card-info {
+    min-height: 86px;
+}
+
+.card-info h3 {
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+}
+
+.card-description,
+.intro-copy,
+.story-panel > p,
+.contact-info {
+    overflow-wrap: anywhere;
+}
+
+.story-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+}
+
+.story-panel .button {
+    grid-column: 1;
+}
+
+.plan-row {
+    align-items: center;
+}
+
+.plan-row h2 {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+    .image-button img,
+    .featured .image-button img {
+        height: auto;
+    }
+
+    .card-info {
+        min-height: 0;
+    }
+
+    .story-panel .button {
+        grid-column: auto;
+    }
+}
