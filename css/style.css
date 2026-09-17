@@ -91,3 +91,12 @@ h1 em, h2 em { color: #efaa73; font-style: italic; }
 }
 
 
+.contact-info {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
