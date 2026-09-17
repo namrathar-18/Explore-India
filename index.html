@@ -1,55 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Explore India</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore India's iconic heritage, coastlines and backwaters with thoughtfully curated travel inspiration.">
+    <title>Explore India | Stories worth travelling for</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#destinations">Skip to destinations</a>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Explore India home">
+            <span class="brand-mark">EI</span>
+            <span>Explore <strong>India</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+            <span class="sr-only">Open navigation</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="active" href="#top">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#stories">Stories</a>
+            <a href="#about">About</a>
+            <a class="nav-cta" href="#plan">Plan a trip <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
 
-<header>
-    <h1>Explore India!!</h1>
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-image" role="img" aria-label="Tropical beach in Goa"></div>
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <p class="eyebrow light">A country of a billion stories</p>
+                <h1 id="hero-title">Go where<br><em>the story begins.</em></h1>
+                <p class="hero-copy">From marble monuments to palm-lined shores, discover the India that stays with you long after you leave.</p>
+                <div class="hero-actions">
+                    <a class="button button-light" href="#destinations">Explore destinations <span aria-hidden="true">↗</span></a>
+                    <a class="text-link light" href="#stories">Read our stories <span aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+            <div class="hero-meta"><span>15° 29' N</span><span class="meta-line"></span><span>Goa, India</span></div>
+            <a class="scroll-cue" href="#destinations" aria-label="Scroll to destinations"><span>Scroll to explore</span><span class="scroll-arrow">↓</span></a>
+        </section>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Places</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+        <section class="intro section-wrap" id="about">
+            <div>
+                <p class="eyebrow">The India edit</p>
+                <h2>More than a destination.<br><em>A feeling.</em></h2>
+            </div>
+            <div class="intro-copy">
+                <p>India rewards the curious. Take the long way through old cities, follow the scent of cardamom into a quiet kitchen, or find your own stretch of coast.</p>
+                <a class="text-link dark" href="#destinations">See what is waiting <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
 
-<section class="hero">
-    <h2>Discover Incredible India</h2>
-    <p>Experience culture, heritage and nature.</p>
+        <section class="destinations section-wrap" id="destinations" aria-labelledby="destinations-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Find your way</p>
+                    <h2 id="destinations-title">Places with a pulse</h2>
+                </div>
+                <div class="filters" role="group" aria-label="Filter destinations">
+                    <button class="filter active" type="button" data-filter="all">All places</button>
+                    <button class="filter" type="button" data-filter="heritage">Heritage</button>
+                    <button class="filter" type="button" data-filter="nature">Nature</button>
+                    <button class="filter" type="button" data-filter="coast">Coast</button>
+                </div>
+            </div>
+            <div class="destination-grid">
+                <article class="destination-card featured" data-category="heritage">
+                    <button class="image-button" type="button" data-title="The Taj Mahal" data-location="Agra, Uttar Pradesh" data-image="./images/tajmahal.jpg" aria-label="View The Taj Mahal">
+                        <img src="./images/tajmahal.jpg" alt="The Taj Mahal reflected in its long garden pool" loading="lazy">
+                        <span class="card-action" aria-hidden="true">↗</span>
+                    </button>
+                    <div class="card-info"><div><p class="card-type">Heritage / North</p><h3>The Taj Mahal</h3></div><span class="card-number">01</span></div>
+                    <p class="card-description">A monument to love, softened by dawn light and the gardens of Agra.</p>
+                </article>
+                <article class="destination-card" data-category="nature">
+                    <button class="image-button" type="button" data-title="Kerala backwaters" data-location="Alappuzha, Kerala" data-image="./images/kerala.jpg" aria-label="View Kerala backwaters">
+                        <img src="./images/kerala.jpg" alt="Traditional houseboats on the Kerala backwaters" loading="lazy">
+                        <span class="card-action" aria-hidden="true">↗</span>
+                    </button>
+                    <div class="card-info"><div><p class="card-type">Nature / South</p><h3>Kerala backwaters</h3></div><span class="card-number">02</span></div>
+                    <p class="card-description">Slow mornings, coconut palms and a waterway that always finds its way home.</p>
+                </article>
+                <article class="destination-card" data-category="coast">
+                    <button class="image-button" type="button" data-title="Goa's quiet coast" data-location="Goa, India" data-image="./images/goa.jpeg" aria-label="View Goa's quiet coast">
+                        <img src="./images/goa.jpeg" alt="A quiet palm-lined beach on the Goa coast" loading="lazy">
+                        <span class="card-action" aria-hidden="true">↗</span>
+                    </button>
+                    <div class="card-info"><div><p class="card-type">Coast / West</p><h3>Goa's quiet coast</h3></div><span class="card-number">03</span></div>
+                    <p class="card-description">Trade the crowds for warm sand, green lagoons and unhurried afternoons.</p>
+                </article>
+            </div>
+        </section>
 
-    <button onclick="showMessage()">
-        Explore More
-    </button>
-</section>
+        <section class="stories section-wrap" id="stories" aria-labelledby="stories-title">
+            <div class="story-panel">
+                <div><p class="eyebrow light">Travel differently</p><h2 id="stories-title">Leave room<br>for <em>serendipity.</em></h2></div>
+                <p>Good journeys are not measured in checklists. They live in the chai stop you did not plan, the conversation that ran late, and the view you had to turn around for.</p>
+                <a class="button button-light" href="#plan">Start planning <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
 
-<section class="places">
+        <section class="plan section-wrap" id="plan" aria-labelledby="plan-title">
+            <p class="eyebrow">Your next chapter</p>
+            <div class="plan-row"><h2 id="plan-title">Where will India<br><em>take you?</em></h2><a class="button button-dark" href="mailto:hello@exploreindia.example">Say hello <span aria-hidden="true">↗</span></a></div>
+        </section>
+    </main>
 
-    <div class="card">
-        <h3>Taj Mahal</h3>
-        <p>Agra, Uttar Pradesh</p>
+    <footer class="site-footer"><span>© <span id="year">2026</span> Explore India</span><span>Made for the curious <span class="footer-dot">●</span></span><a href="#top">Back to top ↑</a></footer>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content"><button class="modal-close" type="button" data-close-modal aria-label="Close image preview">×</button><img id="modal-image" src="" alt=""><div><p class="eyebrow" id="modal-location"></p><h2 id="modal-title"></h2></div></div>
     </div>
-
-    <div class="card">
-        <h3>Kerala Backwaters</h3>
-        <p>God's Own Country</p>
-    </div>
-
-    <div class="card">
-        <h3>Goa Beaches</h3>
-        <p>Sun, Sand and Sea</p>
-    </div>
-
-</section>
-
-<footer>
-    <p>© 2026 Explore India</p>
-</footer>
-
-<script src="./scripts/script.js"></script>
-
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
